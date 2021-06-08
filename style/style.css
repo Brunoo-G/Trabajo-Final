@@ -3,7 +3,7 @@
 *{
     box-sizing: border-box;
     padding: 0px;
-    margin:5px;
+
 }
 
 /* Generales */
@@ -74,4 +74,83 @@ footer p{
     text-align: center;
     margin: 1px;
     padding: 5px;
+}
+
+/* Lista de artistas del home */
+
+.artistas h1{
+    background-color: rgb(31, 31, 73);
+    margin-top: 5%;
+    margin-bottom: 3%;
+    text-align: center;
+    padding: 4%;
+}
+
+/* Lista de canciones del home*/
+
+.canciones h1{
+    background-color: rgb(31, 31, 73);
+    padding: 4%;
+    text-align: center;
+    margin-bottom: 5%;
+}
+
+/* Lista de albumes del home */
+
+.albumes h1{
+    background-color: rgb(31, 31, 73);
+    text-align: center;
+    padding: 4%;
+}
+
+/* Playlist */
+
+.playlist h1{
+    background-color: rgb(31, 31, 73);
+    margin-top: 5%;
+    margin-bottom: 3%;
+    text-align: center;
+    padding: 4%;
+}
+
+/* Detalle de artistas */
+
+.detalle-artistas h1{
+    background-color: rgb(31, 31, 73);
+    margin-top: 5%;
+    margin-bottom: 3%;
+    text-align: center;
+    padding: 4%;
+}
+
+/* Detalle de albumes */
+
+.detalle-albumes h1{
+    background-color: rgb(31, 31, 73);
+    margin-top: 5%;
+    margin-bottom: 3%;
+    text-align: center;
+    padding: 4%;
+}
+
+/* Generos */
+
+.generos h1{
+    background-color: rgb(31, 31, 73);
+    margin-top: 5%;
+    margin-bottom: 3%;
+    text-align: center;
+    padding: 4%;
+}
+
+/*Detalle de generos*/
+
+/* Detalle de canciones */
+
+.detalle-canciones h1{
+    background-color: rgb(31, 31, 73);
+    margin-top: 5%;
+    margin-bottom: 3%;
+    text-align: center;
+    padding: 4%;
 }
