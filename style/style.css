@@ -29,15 +29,14 @@ section{
 /* Cabecera */
 
 .main-header{
-    display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
     font-family: 'Suez One', serif;
     width: 100%;
 }
 .logo{
-    width: 100%;
+    width: 80%;
+    margin-left: 10%;
 }
 .main-header li, .main-header a{
     background-color: rgb(31, 31, 73);
@@ -49,10 +48,37 @@ section{
     padding: 1px;
     text-align: center;
     font-size: 20px;
+    border-radius: 4px;
 }
 .navegacion{
     margin-top: 4%;
-    width: 95%;
+    width: 100%;
+    align-items: center;
+}
+
+/* Formulario */
+
+form{
+    display: flex;
+    justify-content: center;
+}
+
+.casillero{
+    width: 75%;
+    background-color: #171717;
+    padding: 2%;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 100px;
+    color: white;
+}
+
+.boton{
+    background-color: #171717;
+    border: 1px solid rgb(255, 255, 255);
+    width: 17%;
+    margin-left: 3%;
+    border-radius: 100px;
+    color: white;
 }
 
 /* footer */
@@ -82,6 +108,7 @@ footer p{
     margin-bottom: 3%;
     text-align: center;
     padding: 4%;
+    border-radius: 5px;
 }
 
 .artistas img{
@@ -95,6 +122,7 @@ footer p{
     padding: 4%;
     text-align: center;
     margin-bottom: 5%;
+    border-radius: 5px;
 }
 
 /* Lista de albumes del home */
@@ -103,6 +131,7 @@ footer p{
     background-color: rgb(31, 31, 73);
     text-align: center;
     padding: 4%;
+    border-radius: 5px;
 }
 
 .albumes img{
@@ -117,6 +146,7 @@ footer p{
     margin-bottom: 3%;
     text-align: center;
     padding: 4%;
+    border-radius: 5px;
 }
 
 /* Detalle de artistas */
@@ -127,6 +157,7 @@ footer p{
     margin-bottom: 3%;
     text-align: center;
     padding: 4%;
+    border-radius: 5px;
 }
 
 /* Detalle de albumes */
@@ -137,6 +168,7 @@ footer p{
     margin-bottom: 3%;
     text-align: center;
     padding: 4%;
+    border-radius: 5px;
 }
 
 /* Generos */
@@ -147,6 +179,7 @@ footer p{
     margin-bottom: 3%;
     text-align: center;
     padding: 4%;
+    border-radius: 5px;
 }
 
 /*Detalle de generos*/
@@ -159,4 +192,5 @@ footer p{
     margin-bottom: 3%;
     text-align: center;
     padding: 4%;
+    border-radius: 5px;
 }
