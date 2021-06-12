@@ -65,16 +65,6 @@ window.addEventListener("load", function(){
     
     /* Lista de Canciones del home */
 
-    fetch(`${proxy}`)
-    .then(function(response){
-        return response.json();
-    })
-    .then(function(datos){
-        console.log(datos);
-        let cancion_1 = document.querySelector('#cancion_1')
-        cancion_1.innerHTML += `<img src="${datos.cover_medium}"><h2>${datos.title}</h2>`;
-    });
-
 
     /* Lista de Albumes del home */
 
