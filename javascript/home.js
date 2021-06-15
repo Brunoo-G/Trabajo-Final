@@ -39,7 +39,7 @@ window.addEventListener("load", function(){
         artista_3.innerHTML += `<img src="${datos.picture_medium}"><h2>${datos.name}</h2>`;
     });
     
-    let api_4 = `${proxy}https://api.deezer.com/artist/4495513`;
+    let api_4 = `${proxy}https://api.deezer.com/artist/288166`;
    
     fetch(api_4) 
     .then(function(response){
@@ -65,6 +65,55 @@ window.addEventListener("load", function(){
     
     /* Lista de Canciones del home */
 
+    fetch(`${proxy}https://api.deezer.com/track/1124841682`)
+    .then(function(response){
+        return response.json();
+    })
+    .then(function(datos){
+        console.log(datos);
+        let cancion_1 = document.querySelector('#cancion_1')
+        cancion_1.innerHTML += `<img src="${datos.album.cover_medium}"><h2>${datos.title}</h2>`;
+    });
+    
+    fetch(`${proxy}https://api.deezer.com/track/1260522302`)
+    .then(function(response){
+        return response.json();
+    })
+    .then(function(datos){
+        console.log(datos);
+        let cancion_2 = document.querySelector('#cancion_2')
+        cancion_2.innerHTML += `<img src="${datos.album.cover_medium}"><h2>${datos.title}</h2>`;
+    });
+    
+    fetch(`${proxy}https://api.deezer.com/track/1370066842`)
+    .then(function(response){
+        return response.json();
+    })
+    .then(function(datos){
+        console.log(datos);
+        let cancion_3 = document.querySelector('#cancion_3')
+        cancion_3.innerHTML += `<img src="${datos.album.cover_medium}"><h2>${datos.title}</h2>`;
+    });
+   
+    fetch(`${proxy}https://api.deezer.com/track/1280165222`)
+    .then(function(response){
+        return response.json();
+    })
+    .then(function(datos){
+        console.log(datos);
+        let cancion_4 = document.querySelector('#cancion_4')
+        cancion_4.innerHTML += `<img src="${datos.album.cover_medium}"><h2>${datos.title}</h2>`;
+    });
+
+    fetch(`${proxy}https://api.deezer.com/track/1390823292`)
+    .then(function(response){
+        return response.json();
+    })
+    .then(function(datos){
+        console.log(datos);
+        let cancion_5 = document.querySelector('#cancion_5')
+        cancion_5.innerHTML += `<img src="${datos.album.cover_medium}"><h2>${datos.title}</h2>`;
+    });
 
     /* Lista de Albumes del home */
 

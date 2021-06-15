@@ -125,6 +125,20 @@ footer p{
     border-radius: 5px;
 }
 
+.canciones img{
+    width: 30%;
+}
+
+.canciones div{
+    display: flex;
+    margin: 5%;
+    align-items: center;
+}
+
+.canciones h2{
+    margin-left: 10%;
+}
+
 /* Lista de albumes del home */
 
 .albumes h1{
