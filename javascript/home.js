@@ -12,7 +12,10 @@ window.addEventListener("load", function(){
         .then (function(datos){
             console.log(datos);
             let artista_1 = document.querySelector('#artista_1');
-            artista_1.innerHTML += `<img src="${datos.picture_medium}"><h2>${datos.name}</h2>`;
+            artista_1.innerHTML = `<img src="${datos.picture_medium}"><h2>${datos.name}</h2>`;
+        })
+        .catch(function(error){
+            console.log("el error es:" + error)
         });
 
     let api_2 = `${proxy}https://api.deezer.com/artist/429675`;
@@ -24,7 +27,10 @@ window.addEventListener("load", function(){
         .then(function(datos){
             console.log(datos);
             let artista_2 = document.querySelector('#artista_2');
-            artista_2.innerHTML += `<img src="${datos.picture_medium}"><h2>${datos.name}</h2>`;
+            artista_2.innerHTML = `<img src="${datos.picture_medium}"><h2>${datos.name}</h2>`;
+        })
+        .catch(function(error){
+            console.log("el error es:" + error)
         });
 
     let api_3 = `${proxy}https://api.deezer.com/artist/11289472`;
@@ -36,7 +42,10 @@ window.addEventListener("load", function(){
     .then(function(datos){
         console.log(datos);
         let artista_3 = document.querySelector('#artista_3');
-        artista_3.innerHTML += `<img src="${datos.picture_medium}"><h2>${datos.name}</h2>`;
+        artista_3.innerHTML = `<img src="${datos.picture_medium}"><h2>${datos.name}</h2>`;
+    })
+    .catch(function(error){
+        console.log("el error es:" + error)
     });
     
     let api_4 = `${proxy}https://api.deezer.com/artist/288166`;
@@ -48,7 +57,10 @@ window.addEventListener("load", function(){
     .then(function(datos){
         console.log(datos);
         let artista_4 = document.querySelector('#artista_4');
-        artista_4.innerHTML += `<img src="${datos.picture_medium}"><h2>${datos.name}</h2>`;
+        artista_4.innerHTML = `<img src="${datos.picture_medium}"><h2>${datos.name}</h2>`;
+    })
+    .catch(function(error){
+        console.log("el error es:" + error)
     });
     
     let api_5 = `${proxy}https://api.deezer.com/artist/10583405`;
@@ -60,7 +72,10 @@ window.addEventListener("load", function(){
     .then(function(datos){
         console.log(datos);
         let artista_5 = document.querySelector('#artista_5');
-        artista_5.innerHTML += `<img src="${datos.picture_medium}"><h2>${datos.name}</h2>`;
+        artista_5.innerHTML = `<img src="${datos.picture_medium}"><h2>${datos.name}</h2>`;
+    })
+    .catch(function(error){
+        console.log("el error es:" + error)
     });
     
     /* Lista de Canciones del home */
@@ -72,7 +87,10 @@ window.addEventListener("load", function(){
     .then(function(datos){
         console.log(datos);
         let cancion_1 = document.querySelector('#cancion_1')
-        cancion_1.innerHTML += `<img src="${datos.album.cover_medium}"><h2>${datos.title}</h2>`;
+        cancion_1.innerHTML = `<img src="${datos.album.cover_medium}"><h2>${datos.title}</h2>`;
+    })
+    .catch(function(error){
+        console.log("el error es:" + error)
     });
     
     fetch(`${proxy}https://api.deezer.com/track/1260522302`)
@@ -82,7 +100,10 @@ window.addEventListener("load", function(){
     .then(function(datos){
         console.log(datos);
         let cancion_2 = document.querySelector('#cancion_2')
-        cancion_2.innerHTML += `<img src="${datos.album.cover_medium}"><h2>${datos.title}</h2>`;
+        cancion_2.innerHTML = `<img src="${datos.album.cover_medium}"><h2>${datos.title}</h2>`;
+    })
+    .catch(function(error){
+        console.log("el error es:" + error)
     });
     
     fetch(`${proxy}https://api.deezer.com/track/1370066842`)
@@ -92,7 +113,10 @@ window.addEventListener("load", function(){
     .then(function(datos){
         console.log(datos);
         let cancion_3 = document.querySelector('#cancion_3')
-        cancion_3.innerHTML += `<img src="${datos.album.cover_medium}"><h2>${datos.title}</h2>`;
+        cancion_3.innerHTML = `<img src="${datos.album.cover_medium}"><h2>${datos.title}</h2>`;
+    })
+    .catch(function(error){
+        console.log("el error es:" + error)
     });
    
     fetch(`${proxy}https://api.deezer.com/track/1280165222`)
@@ -102,7 +126,10 @@ window.addEventListener("load", function(){
     .then(function(datos){
         console.log(datos);
         let cancion_4 = document.querySelector('#cancion_4')
-        cancion_4.innerHTML += `<img src="${datos.album.cover_medium}"><h2>${datos.title}</h2>`;
+        cancion_4.innerHTML = `<img src="${datos.album.cover_medium}"><h2>${datos.title}</h2>`;
+    })
+    .catch(function(error){
+        console.log("el error es:" + error)
     });
 
     fetch(`${proxy}https://api.deezer.com/track/1390823292`)
@@ -112,7 +139,10 @@ window.addEventListener("load", function(){
     .then(function(datos){
         console.log(datos);
         let cancion_5 = document.querySelector('#cancion_5')
-        cancion_5.innerHTML += `<img src="${datos.album.cover_medium}"><h2>${datos.title}</h2>`;
+        cancion_5.innerHTML = `<img src="${datos.album.cover_medium}"><h2>${datos.title}</h2>`;
+    })
+    .catch(function(error){
+        console.log("el error es:" + error)
     });
 
     /* Lista de Albumes del home */
@@ -124,7 +154,10 @@ window.addEventListener("load", function(){
     .then(function(datos){
         console.log(datos);
         let album_1 = document.querySelector('#album_1')
-        album_1.innerHTML += `<img src="${datos.cover_medium}"><h2>${datos.title}</h2>`;
+        album_1.innerHTML = `<img src="${datos.cover_medium}"><h2>${datos.title}</h2>`;
+    })
+    .catch(function(error){
+        console.log("el error es:" + error)
     });
 
     fetch(`${proxy}https://api.deezer.com/album/211423112`)
@@ -134,7 +167,10 @@ window.addEventListener("load", function(){
     .then(function(datos){
         console.log(datos);
         let album_2 = document.querySelector('#album_2')
-        album_2.innerHTML += `<img src="${datos.cover_medium}"><h2>${datos.title}</h2>`;
+        album_2.innerHTML = `<img src="${datos.cover_medium}"><h2>${datos.title}</h2>`;
+    })
+    .catch(function(error){
+        console.log("el error es:" + error)
     });
 
     fetch(`${proxy}https://api.deezer.com/album/82541262`)
@@ -144,7 +180,10 @@ window.addEventListener("load", function(){
     .then(function(datos){
         console.log(datos);
         let album_3 = document.querySelector('#album_3')
-        album_3.innerHTML += `<img src="${datos.cover_medium}"><h2>${datos.title}</h2>`;
+        album_3.innerHTML = `<img src="${datos.cover_medium}"><h2>${datos.title}</h2>`;
+    })
+    .catch(function(error){
+        console.log("el error es:" + error)
     });
 
     fetch(`${proxy}https://api.deezer.com/album/185413242`)
@@ -154,7 +193,10 @@ window.addEventListener("load", function(){
     .then(function(datos){
         console.log(datos);
         let album_4 = document.querySelector('#album_4')
-        album_4.innerHTML += `<img src="${datos.cover_medium}"><h2>${datos.title}</h2>`;
+        album_4.innerHTML = `<img src="${datos.cover_medium}"><h2>${datos.title}</h2>`;
+    })
+    .catch(function(error){
+        console.log("el error es:" + error)
     });
 
     
@@ -165,7 +207,10 @@ window.addEventListener("load", function(){
     .then(function(datos){
         console.log(datos);
         let album_5 = document.querySelector('#album_5')
-        album_5.innerHTML += `<img src="${datos.cover_medium}"><h2>${datos.title}</h2>`;
+        album_5.innerHTML = `<img src="${datos.cover_medium}"><h2>${datos.title}</h2>`;
+    })
+    .catch(function(error){
+        console.log("el error es:" + error)
     });
 
 }); 
