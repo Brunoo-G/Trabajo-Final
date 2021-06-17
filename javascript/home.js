@@ -93,7 +93,7 @@ window.addEventListener("load", function(){
         console.log("el error es:" + error)
     });
     
-    fetch(`${proxy}https://api.deezer.com/track/1260522302`)
+    fetch(`${proxy}https://api.deezer.com/track/62724015`)
     .then(function(response){
         return response.json();
     })
