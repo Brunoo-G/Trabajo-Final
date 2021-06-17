@@ -13,13 +13,13 @@
         <!-- Cabecera --> 
 
         <header class="main-header">
-                <img class="logo" src="images/logo.png" alt="Logo de la pagina">           
+            <img class="logo" src="images/logo.png" alt="Logo de la pagina">           
 
             <form action="search-results.html" method="GET" target="_blank">
-                <input class="casillero" type="text" name="busquedademusica" placeholder="Cancion, artista, album...">
+                <input class="casillero" type="text" name="busqueda" placeholder="Cancion, artista, album...">
                 <input class="boton" type="submit" value="Buscar">
             </form>  
-            
+                
             <div class="navegacion">
                 <ul>
                     <li><a href="home.html">Home</a></li>
@@ -31,6 +31,8 @@
                 </ul>
             </div>
         </header>
+
+        <section class="resultado"></section>
     </div>
 
     
@@ -50,6 +52,6 @@
         <p>Facundo Bory, Tomas Fontana y Bruno Gonzalez</p>  
     </footer>
 
-    
+    <script src="javascript/buscador.js"></script>
 </body>
 </html>
