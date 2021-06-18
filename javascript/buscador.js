@@ -12,7 +12,7 @@ window.addEventListener("load", function(){
             })
             .then (function(datos){
                 console.log(datos);
-                document.querySelector('.resultado').innerHTML = `<img src="${datos.data[0].artist.picture_medium}"><h2>${datos.data[0].artist.name}</h2>`;
+                document.querySelector('.resultado').innerHTML = `<h2>${datos.data[0].artist.name}</h2><div><img src="${datos.data[0].artist.picture_big}"> <ul><li><h1>Canciones</h1></li> <li><h1>Album</h1></li></ul> </div>`;
             
             })
             .catch(function(error){

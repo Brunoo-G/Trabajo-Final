@@ -63,7 +63,7 @@ window.addEventListener("load", function(){
         console.log("el error es:" + error)
     });
     
-    let api_5 = `${proxy}https://api.deezer.com/artist/10583405`;
+    let api_5 = `${proxy}https://api.deezer.com/artist/246791`;
    
     fetch(api_5) 
     .then(function(response){
