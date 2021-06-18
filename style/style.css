@@ -9,6 +9,7 @@
 /* Generales */
 
 body {
+    align-items: center;
     background-color: rgb(0, 0, 0);
     color: white;
     font-weight: normal;
@@ -443,6 +444,7 @@ footer p{
     width: 100%;
     align-items: center;
     margin-top: 0%;
+    margin-right: 5%;
 }
 
 .resultado li{
