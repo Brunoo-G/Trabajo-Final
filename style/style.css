@@ -200,13 +200,13 @@ footer p{
 
 .generos h2{
     margin-bottom: 3%;
-    padding: 3%;
+    padding: 2%;
 }
 
 .generos a{
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(31, 31, 73);
     padding-bottom: 0%;
-    margin: 1%;
+    margin: 4%;
     font-family: 'Suez One', serif;
 }
 
