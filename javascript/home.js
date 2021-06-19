@@ -1,6 +1,6 @@
 window.addEventListener("load", function(){
 
-    /* Lista de artistas dek home */ 
+    /* Lista de artistas del home */ 
 
     const proxy = 'https://cors-anywhere.herokuapp.com/';
     let api_1 = `${proxy}https://api.deezer.com/artist/8706544`;
@@ -12,7 +12,8 @@ window.addEventListener("load", function(){
         .then (function(datos){
             console.log(datos);
             let artista_1 = document.querySelector('#artista_1');
-            artista_1.innerHTML = `<img src="${datos.picture_medium}"><h2>${datos.name}</h2>`;
+            artista_1.innerHTML = `
+            <img src="${datos.picture_medium}"><h2>${datos.name}</h2>`;
         })
         .catch(function(error){
             console.log("el error es:" + error)
