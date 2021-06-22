@@ -17,6 +17,12 @@ window.addEventListener("load", function(){
             })
             .catch(function(error){
                 console.log("el error es:" + error)
-            });
+            })
+            if (resultadoDeBusqueda == "") {
+                this.alert("Debes escribir algo!")
+            }else if (resultadoDeBusqueda.length <= 3)
+                this.alert("Debes escribir al menos tres caracteres!")
+                ; 
 
 })
+
