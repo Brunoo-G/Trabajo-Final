@@ -67,26 +67,26 @@ window.addEventListener("load", function(){
 
     /* Eventos de cada genero */ 
 
-    // document.querySelector('#genero_1').addEventListener('click' , function(){
-    //     localStorage.setItem('rap', JSON.stringify(`${datos.data[2].name}`));
-    // });
+    document.querySelector('#genero_1').addEventListener('click' , function(){
+        localStorage.setItem('rap', JSON.stringify(`${datos.data[2].name}`));
+    });
 
-    // document.querySelector('#genero_2').addEventListener('click' , function(){
-    //     localStorage.setItem('rap', JSON.stringify(`${datos.data[3].name}`));
-    // });
+    document.querySelector('#genero_2').addEventListener('click' , function(){
+        localStorage.setItem('reggaeton', JSON.stringify(`${datos.data[3].name}`));
+    });
     
-    // document.querySelector('#genero_3').addEventListener('click' , function(){
-    //     localStorage.setItem('rap', JSON.stringify(`${datos.data[19].name}`));
-    // });
+    document.querySelector('#genero_3').addEventListener('click' , function(){
+        localStorage.setItem('funk', JSON.stringify(`${datos.data[19].name}`));
+    });
 
-    // document.querySelector('#genero_4').addEventListener('click' , function(){
-    //     localStorage.setItem('rap', JSON.stringify(`${datos.data[5].name}`));
-    // });
+    document.querySelector('#genero_4').addEventListener('click' , function(){
+        localStorage.setItem('dance', JSON.stringify(`${datos.data[5].name}`));
+    });
 
-    // document.querySelector('#genero_5').addEventListener('click' , function(e){
-    //     e.preventDefault();
-    //     localStorage.setItem('rap', JSON.stringify(`${datos.data[1].name}`));
-    // });
+    document.querySelector('#genero_5').addEventListener('click' , function(e){
+        e.preventDefault();
+        localStorage.setItem('pop', JSON.stringify(`${datos.data[1].name}`));
+    });
 
 });
 

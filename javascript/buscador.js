@@ -13,16 +13,16 @@ window.addEventListener("load", function(){
             .then (function(datos){
                 console.log(datos);
                 document.querySelector('.resultado').innerHTML = `<h2>${datos.data[0].artist.name}</h2><div><img src="${datos.data[0].artist.picture_big}"> <ul><li><h1>Canciones</h1></li> <li><h1>Album</h1></li></ul> </div>`;
-            
             })
             .catch(function(error){
                 console.log("el error es:" + error)
             })
+            
             if (resultadoDeBusqueda == "") {
                 this.alert("Debes escribir algo!")
-            }else if (resultadoDeBusqueda.length <= 3)
-                this.alert("Debes escribir al menos tres caracteres!")
-                ; 
 
-})
+            }else if (resultadoDeBusqueda.length <= 3)
+                this.alert("Debes escribir al menos tres caracteres!") 
+
+});
 

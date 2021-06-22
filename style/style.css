@@ -441,7 +441,7 @@ footer p{
         justify-content: center;
     }
 
-    .generos a, h2{
+    .generos a, .generos h2{
         width: 50%;
         background-color: rgb(31, 31, 73);
         margin: 1%;
