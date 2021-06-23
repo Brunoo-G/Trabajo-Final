@@ -8,12 +8,17 @@ window.addEventListener("load", function(){
         })
         .then (function(datos){
             console.log(datos);
-            let generoElegido = JSON.parse(localStorage.getItem(''));
-            document.querySelector('.detalleagenero').innerHTML = `<h1>${generoElegido}</h1>`
+            let generoElegido1 = JSON.parse(localStorage.getItem('rap'));
+            document.querySelector('.detalleagenero').innerHTML = `<h1>${generoElegido1}</h1>`
+
+            let generoElegido2 = JSON.parse(localStorage.getItem('reggaeton'));
+            document.querySelector('.detalleagenero').innerHTML = `<h1>${generoElegido2}</h1>`
         })
         .catch(function(error){
             console.log("el error es:" + error)
     });
+
+    
 
 
 

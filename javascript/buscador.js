@@ -17,8 +17,13 @@ window.addEventListener("load", function(){
             <div>
                 <img src="${datos.data[0].artist.picture_big}"> 
                 <ul>
-                    <li><h1>Canciones</h1></li> 
-                    <li><h1>Album</h1></li>
+                    <li>
+                    <a href="" ><h1>Canciones</h1></a>
+                    </li> 
+                    
+                    <li>
+                    <h1>Album</h1>
+                    </li>
                 </ul> 
             </div>`;
         })
