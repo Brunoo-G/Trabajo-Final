@@ -15,8 +15,8 @@
         <header class="main-header">
             <img class="logo" src="images/logo.png" alt="Logo de la pagina">           
 
-            <form action="search-results.html" method="GET" target="_blank">
-                <input class="casillero" type="text" name="busqueda" placeholder="Cancion, artista, album...">
+            <form action="search-results.html" method="GET">
+                <input class="casillero" type="text" name="busqueda" placeholder="¡Busca a tu artista preferido!">
                 <input class="boton" type="submit" value="Buscar">
             </form>  
             
@@ -34,7 +34,11 @@
     
 
         <section class="detalle-canciones">
-            <h1>DETALLE DE CANCIONES</h1>
+            <h1>CANCIONES</h1>
+
+            <div class="cancion"></div>
+
+            <a class="fav" href="playlist.html" >Agregar a mi playlist</a>
 
         </section>
     </div>
@@ -56,6 +60,7 @@
         <p>Facundo Bory, Tomas Fontana y Bruno Gonzalez</p>   
     </footer>
 
-    
+    <script src="javascript/detail-songs.js"></script>
+    <script src="javascript/buscador.js"></script>
 </body>
 </html>

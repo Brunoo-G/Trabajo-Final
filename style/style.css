@@ -86,7 +86,7 @@ form{
 
 /* footer */
 
-footer ul, a, li{
+footer ul, footer a, footer li{
     text-decoration: none;
     font-family: 'Arapey', serif;
     display: flex;
@@ -139,6 +139,11 @@ footer p{
 
 .canciones_home h2{
     margin-left: 10%;
+}
+
+.canciones_home a{
+    text-decoration: none;
+    color: white;
 }
 
 /* Lista de albumes del home */
@@ -446,6 +451,10 @@ footer p{
         background-color: rgb(31, 31, 73);
         margin: 1%;
         font-family: 'Suez One', serif;
+        text-decoration: none;
+        color: white;
+        display: flex;
+        justify-content: center;
     }
 
     .generos a{
@@ -493,6 +502,8 @@ footer p{
         padding: 1%;
         background-color: rgb(31, 31, 73);
         margin-top: 10%;
+        text-decoration: none;
+        list-style: none;
     }
 
     .resultado h1{
@@ -501,4 +512,46 @@ footer p{
         font-weight: normal;
     }
 
+    /* Lista de detalle de Canciones */
+
+    .detalle-canciones{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .detalle-canciones h1{
+        width: 100%;
+        background-color: rgb(31, 31, 73);
+        margin-top: 1%;
+        margin-bottom: 2%;
+        text-align: center;
+        padding: 2%;
+        border-radius: 5px;
+    }
+
+    .detalle-canciones div{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .detalle-canciones img{
+        margin: 5%;
+        margin-top: 1%;
+        margin-bottom: 1%;
+        width: 35%;
+        border-radius: 5%;
+    }
+
+    .cancion a, .detalle-canciones h2{
+        text-decoration: none;
+        color: white;
+        display: flex;
+        align-items: center;
+    }
+
+    .detalle-canciones h2{
+        margin-left: 5%;
+    }
+    
 }
