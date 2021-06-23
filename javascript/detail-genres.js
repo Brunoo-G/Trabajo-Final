@@ -8,7 +8,7 @@ window.addEventListener("load", function(){
         })
         .then (function(datos){
             console.log(datos);
-            let generoElegido = JSON.parse(localStorage.getItem('rap'));
+            let generoElegido = JSON.parse(localStorage.getItem(''));
             document.querySelector('.detalleagenero').innerHTML = `<h1>${generoElegido}</h1>`
         })
         .catch(function(error){

@@ -41,7 +41,7 @@ window.addEventListener("load", function(){
         .then (function(datos){
             console.log(datos);
             document.querySelector('#genero_3').innerHTML = `<a href="detail-genres.html"><h2>${datos.data[19].name}</h2></a>`;
-            document.querySelector('genero_3').addEventListener('click' , function(){
+            document.querySelector('#genero_3').addEventListener('click' , function(){
                 localStorage.setItem('funk', JSON.stringify(`${datos.data[19].name}`));
             });
         })
