@@ -117,6 +117,11 @@ footer p{
     border-radius: 50%;
 }
 
+#lista_favoritos a{
+    text-decoration: none;
+    color: white;
+}
+
 /* Lista de canciones del home*/
 
 .canciones_home h1{
@@ -273,16 +278,7 @@ footer p{
     font-weight: normal;
 }
 
-
-
-
-
-
-
-
-
-
-
+/* ---------------------------------------------------------- Media query --------------------------------------------------------------*/
 
 @media (min-width:1024px){  
 
@@ -309,25 +305,40 @@ footer p{
     }
 
     form{
-        width: 60%;
+        width: 100%;
         height: 20%;
         margin-top: 1%;
-        margin-right: 1%;
+        margin-left: 11%;
     }
+    
+    .casillero{
+        width: 100%;
+        background-color: #171717;
+        padding: 2%;
+        border: 1px solid rgb(255, 255, 255);
+        border-radius: 100px;
+        color: white;
+    }
+    
     .boton{
-        width: 25%;
+        background-color: #171717;
+        border: 1px solid rgb(255, 255, 255);
+        width: 40%;
+        margin-left: 3%;
+        border-radius: 100px;
+        color: white;
     }
 
     .navegacion ul{
         margin: 0%;
         display: flex;
-        margin-bottom: 5%;
+        margin-bottom: 8%;
+        margin-right: 5%;
+        justify-content: flex-end;
+        
     }
 
-    .navegacion a{
-        padding: 3%;
-        margin: 3%;
-    }
+
     /* Lista de Artistas del home */
 
     .artistas_home{
@@ -429,7 +440,6 @@ footer p{
         width: 100%;
     }
 
-
     /* Generos */
 
     .generos{
@@ -521,51 +531,6 @@ footer p{
 
     /* Lista de detalle de Canciones */
 
-    .canciones{
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .canciones h1{
-        width: 100%;
-        background-color: rgb(31, 31, 73);
-        margin-top: 1%;
-        margin-bottom: 2%;
-        text-align: center;
-        padding: 1%;
-        border-radius: 5px;
-    }
-
-    .canciones ul{
-        display: flex;
-        flex-direction: row;
-    }
-
-    .canciones div{
-        display: flex;
-        flex-direction: column;
-        margin: 20px;
-        margin-bottom: 0%;
-        }
-        
-    .canciones img{
-        width: 95%;
-        align-items: center;
-        margin: 2%; 
-        margin-top: 4%;
-        border-radius: 10%;
-        }
-
-    #cancion a{
-        text-decoration: none;
-        color: white;
-    }
-    
-    #cancion h2{
-        text-decoration: none;
-        color: white;
-        font-size: 20px;
-    }
+  
     
 }

@@ -3,8 +3,8 @@ window.addEventListener("load", function(){
     const proxy = 'https://cors-anywhere.herokuapp.com/';
 
     /* Lista de artistas del home */ 
-    let artistas_favoritos = [8706544,429675,11289472,288166,246791];
-    mostrar_artitas_favoritos(artistas_favoritos);
+    let artistas_favoritos_id = [8706544,429675,11289472,288166,246791];
+    mostrar_artitas_favoritos(artistas_favoritos_id);
 
 
     function mostrar_artitas_favoritos (array_artistas_favoritos){
@@ -40,7 +40,7 @@ window.addEventListener("load", function(){
         console.log(datos);
         let cancion_1 = document.querySelector('#cancion_1')
         cancion_1.setAttribute("data", datos.id);
-        cancion_1.innerHTML = `<a href="#"><img src="${datos.album.cover_medium}"><h2>${datos.title}</h2></a>`;
+        cancion_1.innerHTML = `<img src="${datos.album.cover_medium}"><h2>${datos.title}</h2>`;
     })
     .catch(function(error){
         console.log("el error es:" + error)
@@ -54,7 +54,7 @@ window.addEventListener("load", function(){
         console.log(datos);
         let cancion_2 = document.querySelector('#cancion_2')
         cancion_2.setAttribute("data", datos.id);
-        cancion_2.innerHTML = `<a href="#"><img src="${datos.album.cover_medium}"><h2>${datos.title}</h2></a>`;
+        cancion_2.innerHTML = `<img src="${datos.album.cover_medium}"><h2>${datos.title}</h2>`;
     })
     .catch(function(error){
         console.log("el error es:" + error)
@@ -68,7 +68,7 @@ window.addEventListener("load", function(){
         console.log(datos);
         let cancion_3 = document.querySelector('#cancion_3')
         cancion_3.setAttribute("data", datos.id);
-        cancion_3.innerHTML = `<a href="#"><img src="${datos.album.cover_medium}"><h2>${datos.title}</h2></a>`;
+        cancion_3.innerHTML = `<img src="${datos.album.cover_medium}"><h2>${datos.title}</h2>`;
     })
     .catch(function(error){
         console.log("el error es:" + error)
@@ -82,7 +82,7 @@ window.addEventListener("load", function(){
         
         let cancion_4 = document.querySelector('#cancion_4')
         cancion_4.setAttribute("data", datos.id);
-        cancion_4.innerHTML = `<a href="#"><img src="${datos.album.cover_medium}"><h2>${datos.title}</h2></a>`;
+        cancion_4.innerHTML = `<img src="${datos.album.cover_medium}"><h2>${datos.title}</h2>`;
     })
     .catch(function(error){
         console.log("el error es:" + error)
@@ -95,7 +95,7 @@ window.addEventListener("load", function(){
     .then(function(datos){
         let cancion_5 = document.querySelector('#cancion_5'); 
         cancion_5.setAttribute("data", datos.id);
-        cancion_5.innerHTML = `<a href="#"><img src="${datos.album.cover_medium}"><h2>${datos.title}</h2></a>`;
+        cancion_5.innerHTML = `<img src="${datos.album.cover_medium}"><h2>${datos.title}</h2>`;
     })
     .catch(function(error){
         console.log("el error es:" + error)
