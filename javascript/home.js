@@ -101,6 +101,39 @@ window.addEventListener("load", function(){
         console.log("el error es:" + error)
     });
 
+    /* Escuchar canciones en player */ 
+
+     document.getElementById("cancion_5").addEventListener("click", function(){
+        let player = document.getElementById("player");
+        let trackid = this.getAttribute("data");
+        player.src = `https://widget.deezer.com/widget/dark/track/${trackid}`;
+
+    });
+    document.getElementById("cancion_4").addEventListener("click", function(){
+        let player = document.getElementById("player");
+        let trackid = this.getAttribute("data");
+        player.src = `https://widget.deezer.com/widget/dark/track/${trackid}`;
+
+    });
+    document.getElementById("cancion_3").addEventListener("click", function(){
+        let player = document.getElementById("player");
+        let trackid = this.getAttribute("data");
+        player.src = `https://widget.deezer.com/widget/dark/track/${trackid}`;
+
+    });
+    document.getElementById("cancion_2").addEventListener("click", function(){
+        let player = document.getElementById("player");
+        let trackid = this.getAttribute("data");
+        player.src = `https://widget.deezer.com/widget/dark/track/${trackid}`;
+
+    });
+    document.getElementById("cancion_1").addEventListener("click", function(){
+        let player = document.getElementById("player");
+        let trackid = this.getAttribute("data");
+        player.src = `https://widget.deezer.com/widget/dark/track/${trackid}`;
+
+    });
+
     /* Lista de Albumes del home */
 
     fetch(`${proxy}https://api.deezer.com/album/217794942`)
@@ -164,34 +197,4 @@ window.addEventListener("load", function(){
         console.log("el error es:" + error)
     });
 
-    document.getElementById("cancion_5").addEventListener("click", function(){
-        let player = document.getElementById("player");
-        let trackid = this.getAttribute("data");
-        player.src = `https://widget.deezer.com/widget/dark/track/${trackid}`;
-
-    });
-    document.getElementById("cancion_4").addEventListener("click", function(){
-        let player = document.getElementById("player");
-        let trackid = this.getAttribute("data");
-        player.src = `https://widget.deezer.com/widget/dark/track/${trackid}`;
-
-    });
-    document.getElementById("cancion_3").addEventListener("click", function(){
-        let player = document.getElementById("player");
-        let trackid = this.getAttribute("data");
-        player.src = `https://widget.deezer.com/widget/dark/track/${trackid}`;
-
-    });
-    document.getElementById("cancion_2").addEventListener("click", function(){
-        let player = document.getElementById("player");
-        let trackid = this.getAttribute("data");
-        player.src = `https://widget.deezer.com/widget/dark/track/${trackid}`;
-
-    });
-    document.getElementById("cancion_1").addEventListener("click", function(){
-        let player = document.getElementById("player");
-        let trackid = this.getAttribute("data");
-        player.src = `https://widget.deezer.com/widget/dark/track/${trackid}`;
-
-    });
 }); 
