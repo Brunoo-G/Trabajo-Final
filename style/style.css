@@ -48,7 +48,7 @@ section{
     color: white;
     text-decoration: none;
     margin: 2%;
-    padding: 1px;
+    padding: 10px;
     text-align: center;
     font-size: 20px;
     border-radius: 4px;
@@ -106,7 +106,6 @@ footer p{
 
 .artistas_home h1{
     background-color: rgb(31, 31, 73);
-    margin-top: 5%;
     margin-bottom: 3%;
     text-align: center;
     padding: 4%;
@@ -193,6 +192,19 @@ footer p{
     border-radius: 5px;
 }
 
+.artistas h1{
+       background-color: rgb(31, 31, 73);
+    margin-top: 5%;
+    margin-bottom: 3%;
+    text-align: center;
+    padding: 4%;
+    border-radius: 5px;
+}
+
+.artistas img{
+    border-radius: 50%;
+}
+
 /* Detalle de albumes */
 
 .detalle-albumes h1{
@@ -201,6 +213,15 @@ footer p{
     margin-bottom: 3%;
     text-align: center;
     padding: 4%;
+    border-radius: 5px;
+}
+
+.albumes h1{
+    background-color: rgb(31, 31, 73);
+    margin-top: 5%;
+    margin-bottom: 3%;
+    text-align: center;
+    padding: 2.5%;
     border-radius: 5px;
 }
 
@@ -227,9 +248,6 @@ footer p{
     font-family: 'Suez One', serif;
 }
 
-
-/*Detalle de generos*/
-
 /* Detalle de canciones */
 
 .detalle-canciones h1{
@@ -238,6 +256,15 @@ footer p{
     margin-bottom: 3%;
     text-align: center;
     padding: 4%;
+    border-radius: 5px;
+}
+
+.canciones h1{
+    background-color: rgb(31, 31, 73);
+    margin-top: 5%;
+    margin-bottom: 3%;
+    text-align: center;
+    padding: 2%;
     border-radius: 5px;
 }
 
@@ -534,8 +561,42 @@ footer p{
         font-weight: normal;
     }
 
-    /* Lista de detalle de Canciones */
+    
+    /* Detalle  */
 
-  
+    .detalle-artistas h1{
+        width: 100%;
+        background-color: rgb(31, 31, 73);
+        margin-top: 1%;
+        margin-bottom: 2%;
+        text-align: center;
+        padding: 2%;
+        border-radius: 5px;
+    }
+
+    .artistas h1{
+        margin-top: 0%;
+        padding: 2%;
+    }
+
+    .artistas{
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .artistas div{
+        justify-content: center;
+        display: block;
+    }
+
+    .albumes{
+        flex-direction: column;
+        width: 100%;
+    }
+    div .albumes{
+        align-items: center;
+    }
+    
     
 }

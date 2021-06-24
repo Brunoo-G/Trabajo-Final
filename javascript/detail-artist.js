@@ -1,13 +1,11 @@
 window.addEventListener("load", function(){
 
     const proxy = 'https://cors-anywhere.herokuapp.com/';
-    let id_artista;
-    let datos_artista;
 
-    id_artista = devolver_artista_id();
+    let idArtista =devolver_artista_id();
     
-    mostrar_info_artista(id_artista);
-    mostrar_discografia_artista(id_artista);
+    mostrar_info_artista(idArtista);
+    mostrar_discografia_artista(idArtista);
 
 
     function devolver_artista_id()
@@ -19,9 +17,9 @@ window.addEventListener("load", function(){
     }
 
 
-    function mostrar_info_artista(id_artista)
+    function mostrar_info_artista(idArtista)
     {
-        let api_url = `${proxy}https://api.deezer.com/artist/${id_artista}`;
+        let api_url = `${proxy}https://api.deezer.com/artist/${idArtista}`;
         
         fetch(api_url)
             .then(function (response){
@@ -29,7 +27,7 @@ window.addEventListener("load", function(){
             })
             .then(function (datos){
                 let artista_1 = document.querySelector('#artista_1');
-                artista_1.innerHTML = `<img src="${datos.picture_medium}"><h2>${datos.name}</h2>`;
+                artista_1.innerHTML = `<img src="${datos.picture_big}"><h2>${datos.name}</h2>`;
             })
             
             .catch(function(error){
@@ -37,9 +35,9 @@ window.addEventListener("load", function(){
             });
     }
 
-    function mostrar_discografia_artista(id_artista)
+    function mostrar_discografia_artista(idArtista)
     {
-        let api_url = `${proxy}https://api.deezer.com/artist/${id_artista}/albums`;
+        let api_url = `${proxy}https://api.deezer.com/artist/${idArtista}/albums`;
 
         fetch(api_url)
             .then(function (response){
@@ -52,7 +50,6 @@ window.addEventListener("load", function(){
                     html += `<div class="albumes" id="album_${i}"><img src="${albumes[i].cover_medium}"><h2>${albumes[i].title}</h2></div>`;
                 }
                 
-
                 let ul_albums = document.querySelector('#lista_albums')
                 ul_albums.innerHTML = html;
             
