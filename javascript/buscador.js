@@ -21,11 +21,11 @@ if (resultadoDeBusqueda != null){
                 <img src="${datos.data[0].artist.picture_big}"> 
                 <ul>
                     <li>
-                    <a href="" ><h1>Canciones</h1></a>
+                    <a href="detail-songs.html" ><h1>Canciones</h1></a>
                     </li> 
                     
                     <li>
-                    <h1>Album</h1>
+                    <a href="detail-album.html" ><h1>Album</h1>
                     </li>
                 </ul> 
             </div>`;
