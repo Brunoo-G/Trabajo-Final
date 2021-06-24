@@ -30,84 +30,6 @@ window.addEventListener("load", function(){
         }  
     }
 
-    
-/*
-    let api_1 = `${proxy}https://api.deezer.com/artist/8706544`;
-
-    fetch(api_1)
-        .then(function (response){
-            return response.json();
-        })
-        .then (function(datos){
-            console.log(datos);
-            let artista_1 = document.querySelector('#artista_1');
-            artista_1.innerHTML = `
-            <a href="detail-artist.html?id=${datos.id}"><img src="${datos.picture_medium}"><h2>${datos.name}</h2></a>`;
-        })
-        .catch(function(error){
-            console.log("el error es:" + error)
-        });
-
-    let api_2 = `${proxy}https://api.deezer.com/artist/429675`;
-
-    fetch(api_2) 
-        .then(function(response){
-            return response.json();
-        })
-        .then(function(datos){
-            console.log(datos);
-            let artista_2 = document.querySelector('#artista_2');
-            artista_2.innerHTML = `<img src="${datos.picture_medium}"><h2>${datos.name}</h2>`;
-        })
-        .catch(function(error){
-            console.log("el error es:" + error)
-        });
-
-    let api_3 = `${proxy}https://api.deezer.com/artist/11289472`;
-   
-    fetch(api_3) 
-    .then(function(response){
-        return response.json();
-    })
-    .then(function(datos){
-        console.log(datos);
-        let artista_3 = document.querySelector('#artista_3');
-        artista_3.innerHTML = `<img src="${datos.picture_medium}"><h2>${datos.name}</h2>`;
-    })
-    .catch(function(error){
-        console.log("el error es:" + error)
-    });
-    
-    let api_4 = `${proxy}https://api.deezer.com/artist/288166`;
-   
-    fetch(api_4) 
-    .then(function(response){
-        return response.json();
-    })
-    .then(function(datos){
-        console.log(datos);
-        let artista_4 = document.querySelector('#artista_4');
-        artista_4.innerHTML = `<img src="${datos.picture_medium}"><h2>${datos.name}</h2>`;
-    })
-    .catch(function(error){
-        console.log("el error es:" + error)
-    });
-    
-    let api_5 = `${proxy}https://api.deezer.com/artist/246791`;
-   
-    fetch(api_5) 
-    .then(function(response){
-        return response.json();
-    })
-    .then(function(datos){
-        console.log(datos);
-        let artista_5 = document.querySelector('#artista_5');
-        artista_5.innerHTML = `<img src="${datos.picture_medium}"><h2>${datos.name}</h2>`;
-    })
-    .catch(function(error){
-        console.log("el error es:" + error)
-    });
-    */
     /* Lista de Canciones del home */
     
     fetch(`${proxy}https://api.deezer.com/track/1124841682`)
@@ -117,7 +39,8 @@ window.addEventListener("load", function(){
     .then(function(datos){
         console.log(datos);
         let cancion_1 = document.querySelector('#cancion_1')
-        cancion_1.innerHTML = `<a href="songs.html"><img src="${datos.album.cover_medium}"><h2>${datos.title}</h2></a>`;
+        cancion_1.setAttribute("data", datos.id);
+        cancion_1.innerHTML = `<a href="#"><img src="${datos.album.cover_medium}"><h2>${datos.title}</h2></a>`;
     })
     .catch(function(error){
         console.log("el error es:" + error)
@@ -130,7 +53,8 @@ window.addEventListener("load", function(){
     .then(function(datos){
         console.log(datos);
         let cancion_2 = document.querySelector('#cancion_2')
-        cancion_2.innerHTML = `<a href="songs.html"><img src="${datos.album.cover_medium}"><h2>${datos.title}</h2></a>`;
+        cancion_2.setAttribute("data", datos.id);
+        cancion_2.innerHTML = `<a href="#"><img src="${datos.album.cover_medium}"><h2>${datos.title}</h2></a>`;
     })
     .catch(function(error){
         console.log("el error es:" + error)
@@ -143,7 +67,8 @@ window.addEventListener("load", function(){
     .then(function(datos){
         console.log(datos);
         let cancion_3 = document.querySelector('#cancion_3')
-        cancion_3.innerHTML = `<a href="songs.html"><img src="${datos.album.cover_medium}"><h2>${datos.title}</h2></a>`;
+        cancion_3.setAttribute("data", datos.id);
+        cancion_3.innerHTML = `<a href="#"><img src="${datos.album.cover_medium}"><h2>${datos.title}</h2></a>`;
     })
     .catch(function(error){
         console.log("el error es:" + error)
@@ -154,9 +79,10 @@ window.addEventListener("load", function(){
         return response.json();
     })
     .then(function(datos){
-        console.log(datos);
+        
         let cancion_4 = document.querySelector('#cancion_4')
-        cancion_4.innerHTML = `<a href="songs.html"><img src="${datos.album.cover_medium}"><h2>${datos.title}</h2></a>`;
+        cancion_4.setAttribute("data", datos.id);
+        cancion_4.innerHTML = `<a href="#"><img src="${datos.album.cover_medium}"><h2>${datos.title}</h2></a>`;
     })
     .catch(function(error){
         console.log("el error es:" + error)
@@ -167,9 +93,9 @@ window.addEventListener("load", function(){
         return response.json();
     })
     .then(function(datos){
-        console.log(datos);
-        let cancion_5 = document.querySelector('#cancion_5')
-        cancion_5.innerHTML = `<a href="songs.html"><img src="${datos.album.cover_medium}"><h2>${datos.title}</h2></a>`;
+        let cancion_5 = document.querySelector('#cancion_5'); 
+        cancion_5.setAttribute("data", datos.id);
+        cancion_5.innerHTML = `<a href="#"><img src="${datos.album.cover_medium}"><h2>${datos.title}</h2></a>`;
     })
     .catch(function(error){
         console.log("el error es:" + error)
@@ -182,7 +108,6 @@ window.addEventListener("load", function(){
         return response.json();
     })
     .then(function(datos){
-        console.log(datos);
         let album_1 = document.querySelector('#album_1')
         album_1.innerHTML = `<img src="${datos.cover_medium}"><h2>${datos.title}</h2>`;
     })
@@ -195,7 +120,6 @@ window.addEventListener("load", function(){
         return response.json();
     })
     .then(function(datos){
-        console.log(datos);
         let album_2 = document.querySelector('#album_2')
         album_2.innerHTML = `<img src="${datos.cover_medium}"><h2>${datos.title}</h2>`;
     })
@@ -208,7 +132,6 @@ window.addEventListener("load", function(){
         return response.json();
     })
     .then(function(datos){
-        console.log(datos);
         let album_3 = document.querySelector('#album_3')
         album_3.innerHTML = `<img src="${datos.cover_medium}"><h2>${datos.title}</h2>`;
     })
@@ -221,7 +144,6 @@ window.addEventListener("load", function(){
         return response.json();
     })
     .then(function(datos){
-        console.log(datos);
         let album_4 = document.querySelector('#album_4')
         album_4.innerHTML = `<img src="${datos.cover_medium}"><h2>${datos.title}</h2>`;
     })
@@ -235,7 +157,6 @@ window.addEventListener("load", function(){
         return response.json();
     })
     .then(function(datos){
-        console.log(datos);
         let album_5 = document.querySelector('#album_5')
         album_5.innerHTML = `<img src="${datos.cover_medium}"><h2>${datos.title}</h2>`;
     })
@@ -243,4 +164,34 @@ window.addEventListener("load", function(){
         console.log("el error es:" + error)
     });
 
+    document.getElementById("cancion_5").addEventListener("click", function(){
+        let player = document.getElementById("player");
+        let trackid = this.getAttribute("data");
+        player.src = `https://widget.deezer.com/widget/dark/track/${trackid}`;
+
+    });
+    document.getElementById("cancion_4").addEventListener("click", function(){
+        let player = document.getElementById("player");
+        let trackid = this.getAttribute("data");
+        player.src = `https://widget.deezer.com/widget/dark/track/${trackid}`;
+
+    });
+    document.getElementById("cancion_3").addEventListener("click", function(){
+        let player = document.getElementById("player");
+        let trackid = this.getAttribute("data");
+        player.src = `https://widget.deezer.com/widget/dark/track/${trackid}`;
+
+    });
+    document.getElementById("cancion_2").addEventListener("click", function(){
+        let player = document.getElementById("player");
+        let trackid = this.getAttribute("data");
+        player.src = `https://widget.deezer.com/widget/dark/track/${trackid}`;
+
+    });
+    document.getElementById("cancion_1").addEventListener("click", function(){
+        let player = document.getElementById("player");
+        let trackid = this.getAttribute("data");
+        player.src = `https://widget.deezer.com/widget/dark/track/${trackid}`;
+
+    });
 }); 
