@@ -37,6 +37,7 @@ window.addEventListener("load", function(){
                 this.alert("Debes escribir algo!");
             }else if (resultadoDeBusqueda.length <= 3)
                     this.alert("Debes escribir al menos tres caracteres!");
+
     }
 });
 
