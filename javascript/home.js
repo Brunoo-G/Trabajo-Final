@@ -18,13 +18,9 @@ window.addEventListener("load", function(){
                     return response.json();
                 })
                 .then (function(datos){
-                    html = `<a href="detail-artist.html?id=${datos.id}">
-                                <div class="artistas" id="artista_"${i}>
-                                <img src="${datos.picture_medium}"><h2>${datos.name}</h2>
-                                </div>
-                            </a>`;
+                    html = `<a href="detail-artist.html?id=${datos.id}"><div class="artistas" id="artista_${i}"><img src="${datos.picture_medium}"><h2>${datos.name}</h2></div></a>`;
                     let ul = document.getElementById("lista_favoritos");
-                    ul.append(html);
+                    ul.innerHTML += html;
                   
                     
                 })

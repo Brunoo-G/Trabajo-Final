@@ -51,7 +51,7 @@ window.addEventListener("load", function(){
                 for(i=0; i<= 4; i++){
                     html += `<div class="albumes" id="album_${i}"><img src="${albumes[i].cover_medium}"><h2>${albumes[i].title}</h2></div>`;
                 }
-                console.log(html);
+                
 
                 let ul_albums = document.querySelector('#lista_albums')
                 ul_albums.innerHTML = html;
