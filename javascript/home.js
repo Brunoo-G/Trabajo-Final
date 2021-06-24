@@ -1,8 +1,41 @@
 window.addEventListener("load", function(){
 
-    /* Lista de artistas del home */ 
-
     const proxy = 'https://cors-anywhere.herokuapp.com/';
+
+    /* Lista de artistas del home */ 
+    let artistas_favoritos = [8706544,429675,11289472,288166,246791];
+    mostrar_artitas_favoritos(artistas_favoritos);
+
+
+    function mostrar_artitas_favoritos (array_artistas_favoritos){
+        
+        for(i=0; i < array_artistas_favoritos.length; i++){
+          
+            let url = `${proxy}https://api.deezer.com/artist/${array_artistas_favoritos[i]}`;
+                
+            fetch(url)
+                .then(function (response){
+                    return response.json();
+                })
+                .then (function(datos){
+                    html = `<a href="detail-artist.html?id=${datos.id}">
+                                <div class="artistas" id="artista_"${i}>
+                                <img src="${datos.picture_medium}"><h2>${datos.name}</h2>
+                                </div>
+                            </a>`;
+                    let ul = document.getElementById("lista_favoritos");
+                    ul.append(html);
+                  
+                    
+                })
+                .catch(function(error){
+                    console.log("el error es:" + error)
+                });
+        }  
+    }
+
+    
+/*
     let api_1 = `${proxy}https://api.deezer.com/artist/8706544`;
 
     fetch(api_1)
@@ -13,7 +46,7 @@ window.addEventListener("load", function(){
             console.log(datos);
             let artista_1 = document.querySelector('#artista_1');
             artista_1.innerHTML = `
-            <img src="${datos.picture_medium}"><h2>${datos.name}</h2>`;
+            <a href="detail-artist.html?id=${datos.id}"><img src="${datos.picture_medium}"><h2>${datos.name}</h2></a>`;
         })
         .catch(function(error){
             console.log("el error es:" + error)
@@ -78,9 +111,9 @@ window.addEventListener("load", function(){
     .catch(function(error){
         console.log("el error es:" + error)
     });
-    
+    */
     /* Lista de Canciones del home */
-
+    
     fetch(`${proxy}https://api.deezer.com/track/1124841682`)
     .then(function(response){
         return response.json();
