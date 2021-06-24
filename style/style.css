@@ -166,6 +166,11 @@ footer p{
     border-radius: 50%;
 }
 
+.albumes_home a{
+    text-decoration: none;
+    color: white;
+}
+
 /* Playlist */
 
 .playlist h1{

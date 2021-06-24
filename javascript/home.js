@@ -9,7 +9,7 @@ window.addEventListener("load", function(){
 
     function mostrar_artitas_favoritos (array_artistas_favoritos){
         
-        for(i=0; i < array_artistas_favoritos.length; i++){
+        for(let i=0; i < array_artistas_favoritos.length; i++){
           
             let url = `${proxy}https://api.deezer.com/artist/${array_artistas_favoritos[i]}`;
                 
@@ -136,65 +136,32 @@ window.addEventListener("load", function(){
 
     /* Lista de Albumes del home */
 
-    fetch(`${proxy}https://api.deezer.com/album/217794942`)
-    .then(function(response){
-        return response.json();
-    })
-    .then(function(datos){
-        let album_1 = document.querySelector('#album_1')
-        album_1.innerHTML = `<img src="${datos.cover_medium}"><h2>${datos.title}</h2>`;
-    })
-    .catch(function(error){
-        console.log("el error es:" + error)
-    });
+    let albumes_favoritos_id = [217794942, 211423112, 82541262, 185413242, 182811182];
+    mostrar_albumes_favoritos(albumes_favoritos_id);
 
-    fetch(`${proxy}https://api.deezer.com/album/211423112`)
-    .then(function(response){
-        return response.json();
-    })
-    .then(function(datos){
-        let album_2 = document.querySelector('#album_2')
-        album_2.innerHTML = `<img src="${datos.cover_medium}"><h2>${datos.title}</h2>`;
-    })
-    .catch(function(error){
-        console.log("el error es:" + error)
-    });
+    function mostrar_albumes_favoritos(array_albumes_favoritos){
 
-    fetch(`${proxy}https://api.deezer.com/album/82541262`)
-    .then(function(response){
-        return response.json();
-    })
-    .then(function(datos){
-        let album_3 = document.querySelector('#album_3')
-        album_3.innerHTML = `<img src="${datos.cover_medium}"><h2>${datos.title}</h2>`;
-    })
-    .catch(function(error){
-        console.log("el error es:" + error)
-    });
+        for (let i=0; i < array_albumes_favoritos.length; i++){
 
-    fetch(`${proxy}https://api.deezer.com/album/185413242`)
-    .then(function(response){
-        return response.json();
-    })
-    .then(function(datos){
-        let album_4 = document.querySelector('#album_4')
-        album_4.innerHTML = `<img src="${datos.cover_medium}"><h2>${datos.title}</h2>`;
-    })
-    .catch(function(error){
-        console.log("el error es:" + error)
-    });
+            fetch(`${proxy}https://api.deezer.com/album/${array_albumes_favoritos[i]}`)
+                .then(function (response){
+                    return response.json();
+                })
+                .then (function(datos){
+                    document.querySelector("#lista_albumes").innerHTML += `
+                    <a href="detail-album.html?id=${datos.id}">
+                        <div class="albumes" id="album_${i}">
+                            <img src="${datos.cover_medium}">
+                            <h2>${datos.title}</h2>
+                        </div>
+                    </a>`;
+                })
+                .catch(function(error){
+                    console.log("el error es:" + error);
+                });
 
-    
-    fetch(`${proxy}https://api.deezer.com/album/182811182`)
-    .then(function(response){
-        return response.json();
-    })
-    .then(function(datos){
-        let album_5 = document.querySelector('#album_5')
-        album_5.innerHTML = `<img src="${datos.cover_medium}"><h2>${datos.title}</h2>`;
-    })
-    .catch(function(error){
-        console.log("el error es:" + error)
-    });
+        }
+
+    }
 
 }); 
